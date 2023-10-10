@@ -39,13 +39,14 @@ public class Controlador implements WindowListener, ActionListener {
 	            //Muestra la imagen de la primera serie al acceder al catálogo
 	            //String imagenPrimera = "img/" + serieActual + ".jpg";
 	            //vistaCatalogo.actualizarImagenPortada(imagenPrimera);
-	            String imagePath = modelo.obtenerPortadaSerie1();
-	            vistaCatalogo.actualizarImagenPortada(imagePath);
+	            /*String imagePath = modelo.obtenerPortadaSerie1();
+	            //vistaCatalogo.actualizarImagenPortada(imagePath);*/
 	          
 	            vistaCatalogo.actualizarImagenPortada("img/1.jpg");
 	            System.out.println("Clicked catalogo");//Para comprobar funcionalidad correcta del botón
 	        } 
 	    } 
+	    //Condicion para moverte en el catálogo
 	    else if (vistaCatalogo != null && vistaCatalogo.isActive()) {
 	    	//Si pulsamos en el botón Next accede a la siguiente serie del catálogo
 	        if (e.getSource().equals(vistaCatalogo.btnNext)) {

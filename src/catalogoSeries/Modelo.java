@@ -48,6 +48,7 @@ public class Modelo {
             statement.setInt(1, id);
             ResultSet resultSet = statement.executeQuery();
 
+            //Creamos variables para guardar datos uno a uno
             if (resultSet.next()) {
             	//Guardamos los datos de la BD
                 String titulo = resultSet.getString("titulo");
@@ -60,7 +61,7 @@ public class Modelo {
                 //Crear un formato de texto para mostrar la información en un TextArea
                 String serieTexto = "Título: " + titulo + "\nDirector: " + director + "\nActores: " + actores
                         + "\nGénero: " + genero + "\nTemporadas: " + temporadas + "\nAño: " + anyo;
-                return serieTexto;//Devuelve el texto formateado
+                return serieTexto;//Devuelve el texto formateado para el text area
             }
         } catch (SQLException ex) {//Controla errores
             ex.printStackTrace();
@@ -68,8 +69,9 @@ public class Modelo {
         return null;//Devuelve nulo sino se encontraron los datos
     }
 
-	public String obtenerPortadaSerie1() {
+    
+	/*public String obtenerPortadaSerie1() {
 		// TODO Auto-generated method stub
 		return "img/1.jpg";
-	}
+	}*/
 }
